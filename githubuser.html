@@ -5,29 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      .box {
-        display: flex;
-        justify-content: center;
-        /* align-items: center;
-         */
-        width: 100%;
-        margin-top: 350px;
-
-        /* max-width: 200px; */
-      }
-      span {
-        background-color: aqua;
-      }
-    </style>
   </head>
   <body>
-    <div class="box">
-      <span>hi</span>
+    <div id="users">
+      <div class="card" style="width: 18rem">
+        <img class="card-img-top" src="..." alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
     </div>
+    <script>
+      //First fetch the API
+      const gitHubUsers = async () => {
+        const response = await fetch("https://api.github.com/users");
+      };
+      //add it to dom
+
+      //get the json data
+    </script>
   </body>
 </html>
