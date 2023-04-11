@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <div>
+    <p class="counter">0</p>
+    <button id="increase">10</button>
+    <button id="decrease">-1</button>
+    <button id="save">save</button>
+    <div>Your count is:<span id="totalCount"></span></div>
+
+    <script>
+      let counter = document.getElementsByClassName("counter")[0];
+      let totalCount = document.getElementById("totalCount");
+      increase.addEventListener("click", (e) => {
+        let count = parseInt(counter.textContent);
+        e.target.style.backgroundColor = "blue";
+        count += parseInt(e.target.textContent);
+        counter.textContent = count;
+      });
+
+      decrease.addEventListener("click", () => {
+        let count = parseInt(counter.textContent);
+        count -= 1;
+        counter.textContent = count;
+      });
+
+      save.addEventListener("click", () => {
+        totalCount.textContent = counter.textContent;
+        // console.log(totalCount);
+      });
+    </script>
+  </body>
+</html>
