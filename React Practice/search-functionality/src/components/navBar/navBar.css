@@ -1,0 +1,59 @@
+/* NavBar.css */
+
+.navbar {
+  background-color: #007bff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically align content */
+  padding: 10px 20px; /* Add padding for spacing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.navbar h1 {
+  color: #fff;
+  margin: 0; /* Remove margin for the h1 elements */
+  font-size: 20px; /* Adjust font size */
+}
+
+.searchBar {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 4px;
+  width: 600px;
+  /* flex-grow: 1; Allow the search bar to expand and fill available space */
+  margin: 0 20px; /* Add margin for spacing */
+}
+
+.searchBar input[type="search"] {
+  border: none;
+  width: 50%;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  display: flex;
+  align-items: center; /* Vertically align list items */
+  margin: 0; /* Remove default margin for ul element */
+  padding: 0; /* Remove default padding for ul element */
+}
+
+ul li {
+  margin-left: 20px; /* Add margin between list items */
+}
+
+/* Style for the "Cart" link */
+ul li:last-child {
+  margin-left: 0; /* Remove margin for the last list item */
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Adjust styling for links */
+.navbar a {
+  text-decoration: none !important;
+}
