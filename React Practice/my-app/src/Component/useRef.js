@@ -1,53 +1,49 @@
-import React, { useRef } from "react";
+import React from "react";
+import { useRef } from "react";
 
-/* THIS IS functional BASED IMPLEMENTATION OF USEREF */
+const UseRefComponent = (props) => {
+  const inputEl = useRef(null);
 
-// export default function UseRef(props) {
-//   const inputEl = useRef();
+  const handleInput = () => {
+    console.log("hi");
+    inputEl.current.value = 1000;
+    inputEl.current.focus();
+    // inputEl.current.style.display = "none";
+  };
 
-//   function focus() {
-//     inputEl.current.style.backgroundColor = "red";
-//     inputEl.current.focus();
-//   }
+  return (
+    <div>
+      <h1>Example of useRef</h1>
+      <input type="text" ref={inputEl} placeholder="Search" />
+      <button onClick={handleInput}>handle input</button>
+    </div>
+  );
+};
+
+export default UseRefComponent;
+
+// import React, { useState } from "react";
+
+// const ControlledComponent = () => {
+//   const [data, setData] = useState(""); // Initialize with an empty string
+
+//   const handleInput = () => {
+//     // Update the data state when the button is clicked
+//     setData(Number(data) + 1000);
+//   };
 
 //   return (
 //     <div>
-//       hello
+//       <h1>Example of Controlled Component</h1>
 //       <input
 //         type="text"
-//         ref={inputEl}
-//         onClick={() => {
-//           focus();
-//         }}
+//         placeholder="search"
+//         value={data} // Bind the input's value to the data state
+//         onChange={(e) => setData(e.target.value)} // Update data when input changes
 //       />
+//       <button onClick={handleInput}>Handle Input</button>
 //     </div>
 //   );
-// }
+// };
 
-/* THIS IS CLASS BASED IMPLEMENTATION OF USEREF */
-
-export default class UseRef extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { inputEl: React.createRef() };
-  }
-
-  focus() {
-    this.state.inputEl.current.style.backgroundColor = "red";
-    this.state.inputEl.current.focus();
-  }
-
-  render() {
-    return (
-      <div>
-        <input
-          type="text"
-          ref={this.state.inputEl}
-          onClick={() => {
-            this.focus();
-          }}
-        />
-      </div>
-    );
-  }
-}
+// export default ControlledComponent;

@@ -18,7 +18,7 @@ export default function UseEffect(props) {
 
   useEffect(() => {
     getData();
-  }, []);
+  });
 
   return (
     <div>
